@@ -24,3 +24,9 @@
 /.dockerignore
 /docker-compose.yml
 /LICENSE
+*.pt
+*.pth
+UI/easyocr_models/
+src/runs/
+videos/
+installer_output/

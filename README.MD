@@ -11,7 +11,8 @@
 fine-tuned on a custom merged dataset of ~16,000 images across 32 classes.**
 
 - Demo Video:
-[![Demo Video](https://img.youtube.com/vi/6wpSoVZwCko/0.jpg)](https://youtu.be/6wpSoVZwCko)
+
+  [![Demo Video](https://img.youtube.com/vi/6wpSoVZwCko/0.jpg)](https://youtu.be/6wpSoVZwCko)
 - Results: 
 ![Result](src/progress_snapshot.png)
 - Architecture:

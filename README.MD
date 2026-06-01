@@ -163,10 +163,10 @@ Speed limit signs share identical circular red borders — the only difference i
 **Why selective augmentation?**
 - Some classes are not too few to be eliminated, but also not enough to train effectively due to insufficient numbers, causing an imbalance between classes. We will use selective agmentation to increase the diversity and number of classes.
 - Different between train with selective augmentation and without selective augmentation
-  + Selective Augmentation
-  ![Selective Augmentation](Image/progress_snapshot.png) 
-  + Without Selective Augmentation - TrainLoss: ~1.03 - ValLoss: ~0.7
+  + Without Selective Augmentation - TrainLoss: ~0.7 - ValLoss: ~1.03 - mAP50: ~0.37
   ![Without Selective Augmentation](Image/overfit_curves.png)
+  + Selective Augmentation - TrainLoss: ~0.91 - ValLoss: ~0.97 - mAP50: ~0.78
+  ![Selective Augmentation](Image/progress_snapshot.png) 
 
 ---
 

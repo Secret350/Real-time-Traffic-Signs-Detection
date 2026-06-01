@@ -95,7 +95,7 @@ git clone https://github.com/Secret350/Real-time-Traffic-Objects-Detection.git
 cd Real-time-Traffic-Objects-Detection
 
 # Copy model weights
-cp src/runs/detect/yolo11_vntraffic_merged_32classes_dataset-4/weights/best.pt
+cp UI/models/best.pt
 
 # Run with GPU
 .\run_docker.bat

@@ -26,8 +26,8 @@ set VCXSRV_PATH=
 if exist "C:\Program Files\VcXsrv\vcxsrv.exe" (
     set VCXSRV_PATH=C:\Program Files\VcXsrv\vcxsrv.exe
 )
-if exist "C:\Program Files (x86)\VcXsrv\vcxsrv.exe" (
-    set VCXSRV_PATH=C:\Program Files (x86)\VcXsrv\vcxsrv.exe
+if exist "D:\SupportTools\VcXsrv\vcxsrv.exe" (
+    set VCXSRV_PATH=D:\SupportTools\VcXsrv\vcxsrv.exe
 )
 
 if "%VCXSRV_PATH%"=="" (

@@ -1,0 +1,68 @@
+services:
+  traffic-detection-gpu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vn-traffic-detection:latest
+    container_name: vn_traffic_gpu
+    profiles: ["gpu", "default"]
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu, compute, utility, video]
+
+    environment:
+      - DISPLAY=host.docker.internal:0.0
+      - QT_X11_NO_MITSHM=1
+      - QT_LOGGING_RULES=*.debug=false
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - CUDA_VISIBLE_DEVICES=0
+      - YOLO_BATCH=16
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./models:/app/models:ro
+      - ./data:/app/data:ro
+      - ./output:/app/output:rw
+      - ./logs:/app/logs:rw
+
+    network_mode: host
+
+    stdin_open: true
+    tty: true
+    restart: "no"
+
+  traffic-detection-cpu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vn-traffic-detection:latest
+    container_name: vn_traffic_cpu
+    profiles: ["cpu"]
+
+    environment:
+      - DISPLAY=${DISPLAY:-host.docker.internal:0.0}
+      - QT_X11_NO_MITSHM=1
+      - CUDA_VISIBLE_DEVICES=""
+      - YOLO_BATCH=4
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./models:/app/models:ro
+      - ./data:/app/data:ro
+      - ./output:/app/output:rw
+      - ./logs:/app/logs:rw
+
+    network_mode: host
+
+    devices:
+      - /dev/video0:/dev/video0
+
+    stdin_open: true
+    tty: true
+    restart: "no"

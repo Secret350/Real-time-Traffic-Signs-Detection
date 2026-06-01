@@ -1,0 +1,76 @@
+# =============================================================
+# .dockerignore  —  Loại bỏ file không cần thiết khỏi image
+# =============================================================
+
+# ── Git ──────────────────────────────────────────────────────
+.git
+.gitignore
+.gitattributes
+
+# ── Python cache ─────────────────────────────────────────────
+*.pyo
+.Python
+*.egg-info/
+dist/
+*.egg
+
+# ── Virtual environments ─────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── YOLO cache (PHẢI xóa trước khi train, không cần trong image) ──
+runs/
+Train.cache
+Valid.cache
+
+# ── Model weights lớn (mount qua volume) ─────────────────────
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+models/
+
+# ── Dataset (mount qua volume) ───────────────────────────────
+data/
+
+# ── Output ───────────────────────────────────────────────────
+output/
+logs/
+*.log
+
+# ── IDE & OS ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Notebook ─────────────────────────────────────────────────
+*.ipynb
+.ipynb_checkpoints/
+
+# ── Docs & README ────────────────────────────────────────────
+docs/
+*.txt
+!requirements.txt
+
+# ── Test ────────────────────────────────────────────────────
+test_*.py
+
+# ── Thư mục lớn chưa có trong dockerignore ──
+dataset/
+EasyOCR/
+easyocr_models/
+image_test/
+inference/
+installer_output/
+processing/
+PyInstaller/
+Real-time_sys/
+src/
+UI/
+venv_build/

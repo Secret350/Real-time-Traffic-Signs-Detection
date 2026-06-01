@@ -10,4 +10,22 @@
 **A real-time Vietnamese traffic sign detection and classification system built on YOLOv11s,
 fine-tuned on a custom merged dataset of ~16,000 images across 32 classes.**
 
-[Demo Video]() - [Quick Start]() - [Result]() - [Architecture]()
+- Demo Video:
+![Demo Video]()
+- Quick Start:
+  + Option 1 - Docker:
+      ```bash
+      git clone https://github.com/Secret350/Real-time-Traffic-Objects-Detection.git
+      .\run_docker.bat
+      ```
+  + Option 2 - Local Python:
+      ```bash
+      git clone https://github.com/Secret350/Real-time-Traffic-Objects-Detection.git
+      python -m venv .venv
+      pip install -r requirements.txt
+      python ui_design.py
+      ```
+- Results: 
+![Result](src/overfit_curves.png)
+- Architecture:
+![Architecture](Image/Vietnamese%20Traffic%20Sign%20Detection%20Architecture.png)

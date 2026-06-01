@@ -11,14 +11,22 @@ ENV PYTHONUNBUFFERED=1 \
     QT_LOGGING_RULES="*.debug=false;qt.qpa.xcb=false" \
     CUDA_VISIBLE_DEVICES=0 \
     DISPLAY=host.docker.internal:0.0 \
-    LIBGL_ALWAYS_INDIRECT=1
-
+    LIBGL_ALWAYS_INDIRECT=1 \
+    QT_QPA_PLATFORM=xcb
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libx11-6 \
     libx11-xcb1 \
     libxcb1 \
     libxcb-glx0 \
     libxcb-xinerama0 \
+    libxcb-icccm4 \
+    libxcb-image0 \
+    libxcb-keysyms1 \
+    libxcb-randr0 \
+    libxcb-render-util0 \
+    libxcb-xkb1 \
+    libxcb-shape0 \
+    libxkbcommon-x11-0 \
     libxext6 \
     libxrender1 \
     libxi6 \
@@ -28,7 +36,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libsm6 \
     libdbus-1-3 \
     libfontconfig1 \
-    python3-pyqt5 \
     fonts-dejavu-core \
     && rm -rf /var/lib/apt/lists/*
 

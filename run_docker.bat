@@ -55,6 +55,9 @@ if /i "%MODE%"=="cpu" (
     docker compose --profile default up --build
 )
 
+if not exist "videos" mkdir videos
+echo [INFO] Copy video vao thu muc 'videos\' de su dung trong app
+
 echo.
 echo [INFO] Container da dung. Dong VcXsrv...
 taskkill /f /im vcxsrv.exe >nul 2>&1

@@ -726,9 +726,14 @@ class MainWindow(QMainWindow):
         self._on_status(f"Saved: {path}","ok")
 
     def _on_open_video(self):
+        if os.path.exists('/app/videos'):
+            video_dir = '/app/videos'
+        else:
+            video_dir = os.path.expanduser("~")
+
         path,_ = QFileDialog.getOpenFileName(
             self,"Choose Video",
-            os.path.expanduser("~"), "Video Files (*.mp4 *.avi *.mov *.mkv *.wmv)"
+            video_dir, "Video Files (*.mp4 *.avi *.mov *.mkv *.wmv)"
         )
         if not path:
             return

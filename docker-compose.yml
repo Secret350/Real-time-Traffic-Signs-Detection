@@ -30,6 +30,7 @@ services:
       - ./data:/app/data:ro
       - ./output:/app/output:rw
       - ./logs:/app/logs:rw
+      - ./videos:/app/videos:ro
 
     network_mode: host
 
@@ -46,7 +47,7 @@ services:
     profiles: ["cpu"]
 
     environment:
-      - DISPLAY=${DISPLAY:-host.docker.internal:0.0}
+      - DISPLAY=host.docker.internal:0.0
       - QT_X11_NO_MITSHM=1
       - CUDA_VISIBLE_DEVICES=""
       - YOLO_BATCH=4
@@ -57,11 +58,8 @@ services:
       - ./data:/app/data:ro
       - ./output:/app/output:rw
       - ./logs:/app/logs:rw
-
+      - ./videos:/app/videos:ro
     network_mode: host
-
-    devices:
-      - /dev/video0:/dev/video0
 
     stdin_open: true
     tty: true

@@ -1,23 +1,9 @@
-ultralytics>=8.3.0
-easyocr>=1.7.0
-opencv-python-headless>=4.9.0
-PyQt5>=5.15.9
-numpy>=1.26.0
-Pillow>=10.2.0
-pyyaml>=6.0.1
-python-dotenv>=1.0.1
-opencv-python
-torch
-
-# OCR
 easyocr==1.7.2
 python-bidi==0.6.10
 pyclipper==1.4.0
-
-# GUI
 PyQt5==5.15.11
 PyQt5-sip==12.18.0
-
-# Tiện ích
 python-dotenv==1.2.2
+PyYAML>=6.0.1
+Pillow>=10.2.0
 shapely==2.1.2

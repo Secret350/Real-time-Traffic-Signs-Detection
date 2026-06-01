@@ -1,7 +1,3 @@
-# =============================================================
-# .dockerignore  —  Loại bỏ file không cần thiết khỏi image
-# =============================================================
-
 # ── Git ──────────────────────────────────────────────────────
 .git
 .gitignore
@@ -20,12 +16,12 @@ env/
 .venv/
 .env/
 
-# ── YOLO cache (PHẢI xóa trước khi train, không cần trong image) ──
+# ── YOLO cache ──
 runs/
 Train.cache
 Valid.cache
 
-# ── Model weights lớn (mount qua volume) ─────────────────────
+# ── Model weights lớn  ─────────────────────
 *.pt
 *.pth
 *.onnx

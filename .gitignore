@@ -1,10 +1,11 @@
 /EasyOCR/test_easyocr.py
 /.idea
 /.venv
+/venv_build
 /dataset
 /image_test
 /inference
-/model
+/models
 /processing
 /Real-time_sys/Testing-Video
 /src/runs/detect/val
@@ -18,3 +19,9 @@
 /src/yolo11s.pt
 /src/yolo11n.pt
 /src/yolo26n.pt
+/.gitignore
+/Dockerfile
+/.dockerignore
+/docker-compose.yml
+/LICENSE
+/run_docker.bat

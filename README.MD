@@ -184,6 +184,14 @@ Speed limit signs share identical circular red borders — the only difference i
 
 ---
 
+## Development orientation
+
+- The improved model can recognize all types of traffic signs in the Vietnamese traffic sign system.
+- Quantizing the model and embedding it into processing computers allows for integration into autonomous vehicle systems.
+- Helps alert users when they violate traffic sign regulations.
+
+---
+
 ## Author
 
 **Nguyễn Đức Minh Trí**

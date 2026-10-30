@@ -1,4 +1,4 @@
-# Real-time Vietnamese Traffic Detection
+# Real-time Vietnamese Traffic Signs Detection
 ### Yolov11s + EasyOCR | PyQt5 UI | Docker Deployment
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
